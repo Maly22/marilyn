@@ -3,10 +3,8 @@
     --color-secundario: white;
     --fuente-Monserratt: "Montserrat", sans-serif;
     --color-terciario: lightblue;
-  }
+}
   
-
-
   body {
     background-color: var(--primary-color);
     color: var(--color-secundario);
@@ -16,7 +14,6 @@
     height: 100vh;
   }
 
-  
   h1 {
     text-align: center;
     color: var(--color-terciario);
