@@ -61,7 +61,6 @@
 
   #Experience p {
     text-align: justify;
- 
   }
   
   #Experience ul {
@@ -79,23 +78,21 @@
     font-size: 1em;
   }
 
-  #Connect h2 {
-    text-align: center;
-    color: beige;
-  }
+#Connect h2 {
+  text-align: center;
+  color: beige;
+}
   
-
-  
-  .connect-list {
+.connect-list {
     display: flex;
     flex-direction: row;
     justify-content: stretch;
     gap: 32px;
     
 
-  }
+}
   
-  .connect-list li {
+.connect-list li {
     width: 100%;
     text-align: justify;
     padding: 21.5px 0;
@@ -109,10 +106,9 @@
     gap: 10px; 
   }
 
-  a:-webkit-any-link {
+a:-webkit-any-link {
     color: var(--color-secundario);
     cursor: pointer;
     text-decoration: none;
 }
-
   
