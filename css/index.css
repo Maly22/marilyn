@@ -3,20 +3,37 @@
     --color-secundario: white;
     --fuente-Monserratt: "Montserrat", sans-serif;
     --color-terciario: lightblue;
+    --color-cuarto: #22D4FD;
 }
   
-  body {
-    background-color: var(--primary-color);
-    color: var(--color-secundario);
-    font-family: "Roboto", sans-serif;
-    margin: 0 auto;
-    width: 90%;
-    height: 100vh;
-  }
+body {
+  background-color: var(--primary-color);
+  color: var(--color-secundario);
+  font-family: "Roboto", sans-serif;
+  margin: 0 auto;
+  width: 90%;
+  height: 100vh;
+}
+.header{
+  padding: 2% 0% 0% 30%;
+}
 
+#navegation{
+  display: flex;
+  gap: 100px;
+}
+
+.header__menu__link{
+  justify-content: center;
+  font-family: var(--fuente-Monserratt);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-cuarto)!important;
+  
+}
   h1 {
     text-align: center;
-    color: var(--color-terciario);
+    color: var(--color-secundario);
     font-size: 3em;
     font-family: "Dancing Script", cursive;
   }
@@ -56,24 +73,44 @@
     
   }
 
-  #Experience p {
-    text-align: justify;
-  }
+#Experience p {
+  text-align: justify;
+}
   
-  #Experience ul {
-    list-style-type: none;
-  }
+#Experience ul {
+  list-style-type: none;
+  padding: 0;
+
+}
   
-  #Experience li {
-    color: var(--primary-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: var(--color-terciario);
-    margin: 10px 10px;
-    font-size: 1em;
-  }
+.job-item {
+  display: flex;
+  flex-direction: column;
+  color: var(--primary-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-terciario);
+  margin: 10px 10px;
+  font-size: 1em;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.job-title {
+  font-weight: bold;
+}
+
+.job-dates {
+  font-style: italic;
+}
+
+.job-description {
+  margin-top: 10px;
+}
 
 #Connect h2 {
   text-align: center;
@@ -95,7 +132,7 @@
     font-family: var(--fuente-Monserratt);
     font-size: 1.5rem;
     align-content: space-between;
-    border: 2px solid var(--color-terciario);
+    border: 2px solid var(--color-cuarto);
     display: flex;
     justify-content: center;
     gap: 10px; 
