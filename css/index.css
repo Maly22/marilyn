@@ -3,37 +3,20 @@
     --color-secundario: white;
     --fuente-Monserratt: "Montserrat", sans-serif;
     --color-terciario: lightblue;
-    --color-cuarto: #22D4FD;
 }
   
-body {
-  background-color: var(--primary-color);
-  color: var(--color-secundario);
-  font-family: "Roboto", sans-serif;
-  margin: 0 auto;
-  width: 90%;
-  height: 100vh;
-}
-.header{
-  padding: 2% 0% 0% 30%;
-}
+  body {
+    background-color: var(--primary-color);
+    color: var(--color-secundario);
+    font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+    width: 90%;
+    height: 100vh;
+  }
 
-#navegation{
-  display: flex;
-  gap: 100px;
-}
-
-.header__menu__link{
-  justify-content: center;
-  font-family: var(--fuente-Monserratt);
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--color-cuarto)!important;
-  
-}
   h1 {
     text-align: center;
-    color: var(--color-secundario);
+    color: var(--color-terciario);
     font-size: 3em;
     font-family: "Dancing Script", cursive;
   }
@@ -63,6 +46,7 @@ body {
   align-items: center;
 }
   
+ lesson-11
 #profile-picture {
   border-radius: 10%;
   max-width: 200px;
@@ -74,41 +58,36 @@ body {
 #Experience p {
   text-align: justify;
 }
+
+  #profile-picture {
+    border-radius: 10%;
+    max-width: 200px;
+    height: 50%;
+    border-color: var(--color-terciario);
+    border-width: 1dvi;
+    border-style: double;
+    
+  }
+
+  #Experience p {
+    text-align: justify;
+  }
+main
   
-#Experience ul {
-  list-style-type: none;
-  padding: 0;
-
-}
+  #Experience ul {
+    list-style-type: none;
+  }
   
-.job-item {
-  display: flex;
-  flex-direction: column;
-  color: var(--primary-color);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: var(--color-terciario);
-  margin: 10px 10px;
-  font-size: 1em;
-}
-
-.job-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.job-title {
-  font-weight: bold;
-}
-
-.job-dates {
-  font-style: italic;
-}
-
-.job-description {
-  margin-top: 10px;
-}
+  #Experience li {
+    color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: var(--color-terciario);
+    margin: 10px 10px;
+    font-size: 1em;
+  }
 
 #Connect h2 {
   text-align: center;
@@ -130,7 +109,7 @@ body {
     font-family: var(--fuente-Monserratt);
     font-size: 1.5rem;
     align-content: space-between;
-    border: 2px solid var(--color-cuarto);
+    border: 2px solid var(--color-terciario);
     display: flex;
     justify-content: center;
     gap: 10px; 
