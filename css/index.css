@@ -110,7 +110,7 @@ a:-webkit-any-link {
 }
 
  /* Tablet styles */
-@media (max-width: 768){ 
+@media (max-width: 768px){ 
   h1 {
     font-size: 4em;
     color: var(--color-secundario);
