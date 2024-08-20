@@ -109,7 +109,8 @@ a:-webkit-any-link {
   text-decoration: none;
 }
 
-@media (max-width: 768){
+ /* Tablet styles */
+@media (max-width: 768){ 
   h1 {
     font-size: 4em;
     color: var(--color-secundario);
@@ -125,6 +126,7 @@ a:-webkit-any-link {
 
 }
 
+ /* Desktop styles */
 @media (min-width: 1024px) {
   h1 {
     font-size: 5em;
