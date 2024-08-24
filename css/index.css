@@ -3,6 +3,7 @@
   --color-secundario: white;
   --fuente-Monserratt: "Montserrat", sans-serif;
   --color-terciario: lightblue;
+  --accent-color: pink;
 }
 
 
@@ -19,18 +20,49 @@ h1 {
   text-align: center;
   align-self: center;
   color: var(--color-terciario);
-  font-size: 3em;
+  font-size: 1em;
   font-family: "Dancing Script", cursive;
 }
 
 p {
-  line-height: 2em;
+  line-height: 1em;
   font-size: 1.2em;
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 1em;
   margin: 20px 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: center; 
+  gap: 30px; 
+}
+
+.header {
+  padding: 20px 0; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-bottom: 4px solid var(--accent-color);
+}
+
+.header__menu__link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-family: var(--fuente-Monserratt);
+  font-size: 1em;
+  margin: 0 50px;
+  padding: 15px 25px; 
+  border-radius: 10px; 
+  background-color: #22D4FD; 
+  transition: background-color 0.3s ease, transform 0.3s ease; 
+  
+}
+
+.header__menu__link:hover {
+  background-color: var(--color-secundario);
+  color: var(--primary-color);
+  transform: scale(1.1); 
 }
 
 #About div {
@@ -62,6 +94,30 @@ h2 {
 #Experience p {
   text-align: justify;
 }
+.experience-item {
+  color: var(--primary-color);
+  padding: 0px;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-terciario);
+  margin: 5px 0;
+  cursor: pointer; 
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.experience-details {
+  display: none; 
+}
+
+.experience-item.open .experience-details {
+  display: block; 
+}
 
 #Experience ul {
   list-style-type: none;
@@ -69,32 +125,29 @@ h2 {
 
 #Experience li {
   color: var(--primary-color);
-  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   background-color: var(--color-terciario);
-  margin: 10px 10px;
-  font-size: 1em;
   align-content: center;
 }
 
-  h1 {
-    text-align: center;
-    color: var(--color-terciario);
-    font-size: 3em;
-    font-family: "Dancing Script", cursive;
-  }
+h1 {
+  text-align: center;
+  color: var(--color-terciario);
+  font-size: 1.5em;
+  font-family: "Dancing Script", cursive;
+}
   
-  p {
-    line-height: 2em;
-    font-size: 1.2em;
-  }
+p {
+  line-height: 2em;
+  font-size: 1em;
+}
   
-  h2{
-    font-size:2em;
-    margin:20px 0;
-  }
+h2{
+  font-size:1.6em;
+  margin:20px 0;
+}
 #About div {
   display: flex;
   gap: 10px;
@@ -134,25 +187,41 @@ h2 {
     
   }
 
-  #Experience p {
-    text-align: justify;
-  }
-main
+#Experience p {
+  text-align: justify;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
   
-  #Experience ul {
-    list-style-type: none;
-  }
+.date {
+  font-size: 0.8em;
+  color: var(--primary-color);
+  background-color: var(--color-terciario);
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
   
-  #Experience li {
-    color: var(--primary-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: var(--color-terciario);
-    margin: 10px 10px;
-    font-size: 1em;
-  }
+#Experience ul {
+  list-style-type: none;
+}
+  
+#Experience li {
+  color: var(--primary-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: var(--color-terciario);
+  margin: 10px 10px;
+  font-size: 1em;
+  position: relative;
+}
 
 
 #Connect h2 {
@@ -184,20 +253,21 @@ a:-webkit-any-link {
   color: var(--color-secundario);
   cursor: pointer;
   text-decoration: none;
+  align-self: center;
 }
 
  /* Tablet styles */
 @media (max-width: 768px){ 
   h1 {
-    font-size: 4em;
+    font-size: 2em;
     color: var(--color-secundario);
   }
   p {
-    font-size: 1.5em;
-    line-height: 2.5em;
+    font-size: 1.2em;
+    line-height: 1.8em;
   }
   #Experience li {
-    font-size: 1.2em;
+    font-size: 1.1em;
     padding: 15px;
   }
 
@@ -206,15 +276,15 @@ a:-webkit-any-link {
  /* Desktop styles */
 @media (min-width: 1024px) {
   h1 {
-    font-size: 5em;
+    font-size: 2.5em;
     color: var(--color-terciario);
   }
   p {
-    font-size: 1.7em; 
-    line-height: 2.8em;
+    font-size: 1.2em; 
+    line-height: 2em;
   }
   #Experience li {
-    font-size: 1.4em;
+    font-size: 1.2em;
     padding: 20px;
   }
 }
