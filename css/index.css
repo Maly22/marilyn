@@ -5,6 +5,7 @@
   --color-terciario: lightblue;
 }
 
+
 body {
   background-color: var(--primary-color);
   color: var(--color-secundario);
@@ -77,6 +78,82 @@ h2 {
   font-size: 1em;
   align-content: center;
 }
+
+  h1 {
+    text-align: center;
+    color: var(--color-terciario);
+    font-size: 3em;
+    font-family: "Dancing Script", cursive;
+  }
+  
+  p {
+    line-height: 2em;
+    font-size: 1.2em;
+  }
+  
+  h2{
+    font-size:2em;
+    margin:20px 0;
+  }
+#About div {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+  
+#About p {
+  width: 50%;
+  text-align: justify;
+}
+  
+.left-text {
+  align-items: center;
+}
+  
+ lesson-11
+#profile-picture {
+  border-radius: 10%;
+  max-width: 200px;
+  height: 50%;
+  border-color: var(--color-terciario);
+  border-width: 1dvi;
+  border-style: double;
+}
+#Experience p {
+  text-align: justify;
+}
+
+  #profile-picture {
+    border-radius: 10%;
+    max-width: 200px;
+    height: 50%;
+    border-color: var(--color-terciario);
+    border-width: 1dvi;
+    border-style: double;
+    
+  }
+
+  #Experience p {
+    text-align: justify;
+  }
+main
+  
+  #Experience ul {
+    list-style-type: none;
+  }
+  
+  #Experience li {
+    color: var(--primary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: var(--color-terciario);
+    margin: 10px 10px;
+    font-size: 1em;
+  }
+
 
 #Connect h2 {
   text-align: center;
