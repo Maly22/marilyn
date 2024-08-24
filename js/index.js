@@ -3,9 +3,9 @@ const body = document.querySelector('body');
 body.appendChild(footer);
 
 const today = new Date();
-const year = today.getFullYear();
+const thisYear = today.getFullYear();
 const copyright = document.createElement('p');
-copyright.innerHTML = `<span>Marilyn</span><span>&#169year</span><span>${year}</span>`
+copyright.innerHTML = `<span>Marilyn \u00A9 ${thisYear}</span>`;
 footer.appendChild(copyright);
 
 const skillsList = ['C++', 'Revit', 'AutoCAD', 'Microsoft Office'];
