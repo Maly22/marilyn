@@ -12,9 +12,9 @@ const skillsList = ['C++', 'Revit', 'AutoCAD', 'Microsoft Office'];
 const skillsSection = document.getElementById('Skills');
 const skillUL = skillsSection.querySelector('ul');
 
-for (Skills of skillsList){
+for (skill of skillsList){
    let skillItem = document.createElement('li');
-   skillItem.innerHTML = Skills;
+   skillItem.innerHTML = skill;
    skillItem.style.fontSize = '1.4em';
     skillUL.appendChild(skillItem);
 }
