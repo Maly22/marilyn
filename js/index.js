@@ -33,7 +33,7 @@ let messageSection = document.getElementById('message-section');
 let messageList = messageSection.querySelector('ul');
 messageSection.hidden = true;
 
-let idCpunter = 0;
+let idCounter = 0;
 function makeId(){
   let id = 'entry' + idCounter++;
   return id;
