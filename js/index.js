@@ -55,7 +55,7 @@ messageForm.addEventListener('submit', (event) => {
   newMessage.classList.add('message-item');
 
   newMessage.innerHTML = `<a href="mailto:${email} ">${name} </a><span>wrote: ${message} </span>`;
-  newMessage.setAttribute('id', iud);
+  newMessage.setAttribute('id', id);
 
   entryById[id] = { usersName: name, usersEmail: email, usersMessage: message };
   message.appendChild(makeEditButton());
@@ -75,14 +75,14 @@ function makeRemoveButton() {
   removeButton.type = 'button';
   removeButton.className = 'remove-button';
   removeButton.addEventListener('click', () => {
-    let removeButton = document.createElement("button");
+    let entry = removeButton.parentNode;
     let uidl = entry.getAttribute('id');
     delete entryById[uidl];
     entry.remove();
     if (messageList.childElementCount === 0) {
       messageSection.hidden = true;
-    };
-  });
+    }
+});
   return removeButton;
 };
 
