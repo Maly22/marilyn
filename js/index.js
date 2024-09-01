@@ -34,7 +34,7 @@ let messageList = messageSection.querySelector('ul');
 messageSection.hidden = true;
 
 let idCounter = 0;
-function makeId(){
+function makeId() {
   let id = 'entry' + idCounter++;
   return id;
 }
@@ -54,10 +54,10 @@ messageForm.addEventListener('submit', (event) => {
   let newMessage = document.createElement('li');
   newMessage.classList.add('message-item');
 
-  newMessage-innerHTML = `<a href="mailto:${email} ">${name} </a><span>wrote: ${message} </span>`;
+  newMessage - innerHTML = `<a href="mailto:${email} ">${name} </a><span>wrote: ${message} </span>`;
   newMessage.setAttribute('id', iud);
 
-  entryById[iud] = {usersName: name, usersEmail: email, usersMessage: message};
+  entryById[iud] = { usersName: name, usersEmail: email, usersMessage: message };
   message.appendChild(makeEditButton());
   newMessage.appendChild(makeRemoveButton());
 
