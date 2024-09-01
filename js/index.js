@@ -75,7 +75,7 @@ function makeRemoveButton(){
   removeButton.type = 'button';
   removeButton.className = 'remove-button';
   removeButton.addEventListener('click', () => {
-    let entry = removeButton.parentNode;
+  let removeButton = document.createElement("button");
     let uidl = entry.getAttribute('id');
     delete entryById[uidl];
     entry.remove();
