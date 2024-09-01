@@ -85,7 +85,7 @@ header nav {
   border-radius: 10%;
   max-width: 200px;
   height: 50%;
-  border-color: var(--color-terciario);
+  border-color: #22D4FD;
   border-width: 1dvi;
   border-style: double;
 
@@ -303,13 +303,13 @@ a:-webkit-any-link {
   background-color: #0056b3;
 }
 
-#meesage-section {
+#message-section {
   margin-top: 20px;
   width: 100%;
   max-width: 500px;
 }
 
-#meesage-section h2 {
+#mesage-section h2 {
   font-size: 24px;
   margin-bottom: 10px;
 }

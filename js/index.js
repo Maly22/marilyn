@@ -14,7 +14,7 @@ const skillUL = skillsSection.querySelector('ul');
 
 for (let skill of skillsList) {
   let skillItem = document.createElement('li');
-  skillItem.innerHTML = skill;
+  skillItem.innerText = skill;
   skillItem.style.fontSize = '1.4em';
   skillUL.appendChild(skillItem);
 }
@@ -33,13 +33,13 @@ let messageSection = document.getElementById('message-section');
 let messageList = messageSection.querySelector('ul');
 messageSection.hidden = true;
 
-let idCpunter = 0;
-function makeId(){
+let idCounter = 0;
+function makeId() {
   let id = 'entry' + idCounter++;
   return id;
 }
 
-let entryById={};
+let entryById = {};
 
 messageForm.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -50,36 +50,39 @@ messageForm.addEventListener('submit', (event) => {
   console.log('Name:', name);
   console.log('Email:', email);
   console.log('Message:', message);
-  let uid = makeId();
-  let newMessage = document.createElement('li');
-  newMessage.classList.add('message-item');
 
-  newMessage-innerHTML = `<a href="mailto:${email} ">${name} </a><span>wrote: ${message} </span>`;
-  newMessage.setAttribute('id', iud);
-
-  entryById[iud] = {usersName: name, usersEmail: email, usersMessage: message};
-  message.appendChild(makeEditButton());
+  let id = makeId();
+  let newMessage = document.createElement("li");
+  newMessage.classList.add("message-item");
+  newMessage.innerHTML = `<a href="mailto:${email} ">${name} </a><span>wrote: ${message} </span>`;
+  newMessage.setAttribute("id", id);
+  entryById[id] = {
+    usersName: name,
+    usersEmail: email,
+    usersMessage: message,
+  };
+  newMessage.appendChild(makeEditButton());
   newMessage.appendChild(makeRemoveButton());
 
   messageList.appendChild(newMessage);
-  messageForm.requestFullscreen();
+  messageForm.reset();
   messageSection.hidden = false;
 
 });
 
 //remove button
 
-function makeRemoveButton(){
-  let makeRemoveButton = document.createElement('button');
+function makeRemoveButton() {
+  let removeButton = document.createElement('button');
   removeButton.innerText = 'remove';
   removeButton.type = 'button';
   removeButton.className = 'remove-button';
   removeButton.addEventListener('click', () => {
-    let entry = removeButton.parentNode;
+    let removeButton = document.createElement("button");
     let uidl = entry.getAttribute('id');
     delete entryById[uidl];
     entry.remove();
-    if (messageList.childElementCount === 0 ){
+    if (messageList.childElementCount === 0) {
       messageSection.hidden = true;
     };
   });
@@ -88,12 +91,12 @@ function makeRemoveButton(){
 
 //edit button
 
-function makeEditButton(){
+function makeEditButton() {
   let editButton = document.createElement('button');
   editButton.innerText = 'edit';
   editButton.type = 'button';
   editButton.className = 'edit-button';
-  editButton.addEventListener('click', () =>{
+  editButton.addEventListener('click', () => {
     let entry = editButton.parentNode;
 
     let oldEditButton = entry.querySelector('button.edit-button');
@@ -109,7 +112,7 @@ function makeEditButton(){
     clonedForm.usersEmail.value = entryById[uid].usersEmail;
     clonedForm.usersMessage.value = entryById[uid].usersMessage;
     entry.appendChild(clonedForm);
-    clonedForm.addEventListener('submit', function editMessage(event){
+    clonedForm.addEventListener('submit', function editMessage(event) {
       event.preventDefault();
       entryById[uid].usersName = event.target.usersName.value;
       entryById[uid].usersEmail = event.target.usersEmail.value;
@@ -121,9 +124,9 @@ function makeEditButton(){
       newEntry.appendChild(makeEditButton());
       newEntry.appendChild(makeRemoveButton());
       entry.parentNode.replaceChild(newEntry, entry);
-    
+
     });
 
   });
-return editButton;
+  return editButton;
 };
