@@ -50,15 +50,18 @@ messageForm.addEventListener('submit', (event) => {
   console.log('Name:', name);
   console.log('Email:', email);
   console.log('Message:', message);
-  let uid = makeId();
-  let newMessage = document.createElement('li');
-  newMessage.classList.add('message-item');
+  let id = makeId();
+  let newMessage = document.createElement("li");
+  newMessage.classList.add("message-item");
 
-  newMessage-innerHTML = `<a href="mailto:${email} ">${name} </a><span>wrote: ${message} </span>`;
-  newMessage.setAttribute('id', iud);
+  newMessage.innerHTML = `<a href="mailto:${email} ">${name} </a><span>wrote: ${message} </span>`;
+  newMessage.setAttribute("id", id);
 
-  entryById[iud] = {usersName: name, usersEmail: email, usersMessage: message};
-  message.appendChild(makeEditButton());
+  entryById[id] = {
+    usersName: name,
+    usersEmail: email,
+    usersMessage: message,
+  };
   newMessage.appendChild(makeRemoveButton());
 
   messageList.appendChild(newMessage);
