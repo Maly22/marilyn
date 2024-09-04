@@ -58,7 +58,7 @@ messageForm.addEventListener('submit', (event) => {
   newMessage.setAttribute('id', id);
 
   entryById[id] = { usersName: name, usersEmail: email, usersMessage: message };
-  message.appendChild(makeEditButton());
+  newMessage.appendChild(makeEditButton());
   newMessage.appendChild(makeRemoveButton());
 
   messageList.appendChild(newMessage);
