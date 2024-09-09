@@ -80,7 +80,7 @@ function makeRemoveButton() {
     if (messageList.childElementCount === 0) {
       messageSection.hidden = true;
     }
-});
+  });
   return removeButton;
 };
 
@@ -121,7 +121,7 @@ function makeEditButton() {
       entry.parentNode.replaceChild(newEntry, entry);
 
     });
-    
+
   });
   return editButton;
 };
@@ -156,6 +156,6 @@ fetch(`https://api.github.com/users/${userName}/repos`)
     if (error instanceof SyntaxError) {
       console.error("Unparsable response from server");
     } else {
-      console.error("Projects section element not found in the document.");
+      console.error("Error fetching data:", error.message);
     }
   })
