@@ -85,7 +85,7 @@ header nav {
   border-radius: 10%;
   max-width: 200px;
   height: 50%;
-  border-color: var(--color-terciario);
+  border-color: #22D4FD;
   border-width: 1dvi;
   border-style: double;
 
@@ -254,6 +254,75 @@ a:-webkit-any-link {
   cursor: pointer;
   text-decoration: none;
   align-self: center;
+}
+
+.message-form {
+  background: var(--primary-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
+}
+
+.message-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.message-form input,
+.message-form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.message-form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.message-form button {
+  background-color: #22D4FD;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.message-form button:hover {
+  background-color: #0056b3;
+}
+
+#message-section {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+#message-section h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+#messages {
+  list-style-type: none;
+  padding: 0;
+}
+
+#messages li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
 }
 
  /* Tablet styles */
