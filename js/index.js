@@ -26,6 +26,7 @@ document.querySelectorAll('.experience-item').forEach(item => {
   });
 });
 
+
 let messageForm = document.querySelector("[name='leave_message']");
 let messageSection = document.getElementById('message-section');
 let messageList = messageSection.querySelector('ul');
@@ -80,7 +81,7 @@ function makeRemoveButton() {
     if (messageList.childElementCount === 0) {
       messageSection.hidden = true;
     }
-  });
+
   return removeButton;
 };
 
@@ -125,8 +126,6 @@ function makeEditButton() {
   });
   return editButton;
 };
-
-//repositories
 
 const userName = 'Maly22';
 
