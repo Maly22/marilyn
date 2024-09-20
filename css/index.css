@@ -166,28 +166,6 @@ h2 {
   align-items: center;
 }
 
-lesson-11 #profile-picture {
-  border-radius: 10%;
-  max-width: 200px;
-  height: 50%;
-  border-color: var(--color-terciario);
-  border-width: 1dvi;
-  border-style: double;
-}
-
-#Experience p {
-  text-align: justify;
-}
-
-#profile-picture {
-  border-radius: 10%;
-  max-width: 200px;
-  height: 50%;
-  border-color: var(--color-terciario);
-  border-width: 1dvi;
-  border-style: double;
-
-}
 
 #Experience p {
   text-align: justify;

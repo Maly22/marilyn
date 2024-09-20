@@ -81,6 +81,7 @@ function makeRemoveButton() {
     if (messageList.childElementCount === 0) {
       messageSection.hidden = true;
     }
+  });
 
   return removeButton;
 };
