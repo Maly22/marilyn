@@ -19,6 +19,7 @@ for (let skill of skillsList) {
   skillUL.appendChild(skillItem);
 }
 
+
 document.querySelectorAll('.experience-item').forEach(item => {
   item.addEventListener('click', () => {
     item.classList.toggle('open');
@@ -26,8 +27,6 @@ document.querySelectorAll('.experience-item').forEach(item => {
 });
 
 
-//handle events for the message form
-//
 let messageForm = document.querySelector("[name='leave_message']");
 let messageSection = document.getElementById('message-section');
 let messageList = messageSection.querySelector('ul');
@@ -82,7 +81,7 @@ function makeRemoveButton() {
     if (messageList.childElementCount === 0) {
       messageSection.hidden = true;
     }
-});
+
   return removeButton;
 };
 
@@ -127,3 +126,35 @@ function makeEditButton() {
   });
   return editButton;
 };
+
+const userName = 'Maly22';
+
+fetch(`https://api.github.com/users/${userName}/repos`)
+  .then((response) => {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error("Failed to fetch repositories");
+    }
+  })
+  .then((repositories) => {
+    console.log(repositories);
+
+    const projectSection = document.getElementById("projects");
+    let projectList = document.createElement("ul");
+    projectSection.appendChild(projectList);
+
+    for (let repository of repositories) {
+      let project = document.createElement("li");
+      project.innerText = repository.name;
+      projectList.appendChild(project);
+    }
+  })
+
+  .catch(error => {
+    if (error instanceof SyntaxError) {
+      console.error("Unparsable response from server");
+    } else {
+      console.error("Error fetching data:", error.message);
+    }
+  })
