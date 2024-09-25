@@ -116,11 +116,12 @@ header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  font-size: medium;
 }
 
 .experience-details {
   display: none;
+  font-size: medium;
 }
 
 .experience-item.open .experience-details {
@@ -214,6 +215,7 @@ h2 {
   background-color: var(--color-secundario); 
 }
 
+
 #projects ul li a {
   color: var(--color-secundario); 
   text-decoration: none; 
@@ -253,6 +255,15 @@ h2 {
 
 .connect-list li:hover {
   background-color: #22D4FD;
+}
+.message-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.message-text {
+  width: 90%; 
 }
 
 .message-form {
@@ -324,6 +335,28 @@ h2 {
   border-radius: 4px;
 }
 
+.message-image {
+  width: 95%; 
+  text-align: right;
+}
+
+#portfolio {
+  margin-top: 20px; 
+}
+
+#portfolio-picture {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5%;
+  border: 2px solid transparent;
+  transition: border-color 0.4s ease;
+}
+
+#portfolio-picture:focus, 
+#portfolio-picture:hover {
+  border-color: var(--color-terciario);
+}
+
 
 a:-webkit-any-link {
   color: var(--color-secundario);
@@ -331,6 +364,7 @@ a:-webkit-any-link {
   text-decoration: none;
   align-self: center;
 }
+
 
 
 @media (max-width: 768px){ 
