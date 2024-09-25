@@ -41,7 +41,7 @@ header nav {
 }
 
 .header {
-  padding: 20px 0;
+  padding: 20px 0px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   border-bottom: 4px solid var(--accent-color);
 }
@@ -51,7 +51,7 @@ header nav {
   text-decoration: none;
   font-family: var(--fuente-Monserratt);
   font-size: 1em;
-  margin: 0 50px;
+  margin: 0 41px;
   padding: 15px 25px;
   border-radius: 10px;
   background-color: #22D4FD;
