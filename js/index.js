@@ -147,7 +147,12 @@ fetch(`https://api.github.com/users/${userName}/repos`)
 
     for (let repository of repositories) {
       let project = document.createElement("li");
-      project.innerText = repository.name;
+      let link = document.createElement("a");
+      link.href = repository.html_url;
+      link.target = "_blank";
+      link.appendChild(document.createTextNode(repository.name));
+
+      project.appendChild(link);
       projectList.appendChild(project);
     }
   })
